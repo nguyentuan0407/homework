@@ -1,47 +1,52 @@
 #include <stdio.h>
 
 int main() {
-    while(1) {
         int a, b;
         int luachonmenu;
-        printf("==menu===\n\n");
-        printf("1.cong hai so\n");
-        printf("2.tru hai so\n");
-        printf("3.nhan hai so\n");
-        printf("4.chia hai so\n");
+    do{
+        printf("====menu====\n\n1.cong hai so\n2.tru hai so\n3.nhan hai so\n4.chia hai so\n5.thoat\n\n""xin moi chon: ");
         scanf("%d", &luachonmenu);
-        printf("\n");
-        printf("moi nhap so a =\n");
-        scanf("%d", &a);
-        printf("moi nhap so b =\n");
-        scanf("%d", &b);
-
-        printf("\n");
 
         switch (luachonmenu) {
-            case 1:
+            case 1:{
+                printf("nhap hai so a, b: ");
+                scanf("%d%d", &a, &b);
                 printf("the plus:%d", a + b);
                 break;
-            case 2:
+            }
+            case 2: {
+                printf("nhap hai so a, b: ");
+                scanf("%d%d", &a, &b);
                 printf("the minus:%d", a - b);
                 break;
-            case 3:
+            }
+            case 3:{
+                printf("nhap hai so a, b: ");
+                scanf("%d%d", &a, &b);
                 printf("the multip:%d, a*b");
                 break;
-            case 4:
+            }
+            case 4:{
+                printf("nhap hai so a, b: ");
+                scanf("%d%d", &a, &b);
                 if (b != 0) {
                     printf("the divide:%0.2f", (float) a / b);
                 } else {
                     printf("the divide: over");
                 }
                 break;
+            }
+            case 5:{
+                break;
+            }
             default:
-                printf("you have chosen wrong, please chosen again ");
-
-
-
+                printf("please chosen again");
+                break;
         }
 
-    }
+    } while(luachonmenu!=5);
     return 0;
-}
+    }
+
+
+
